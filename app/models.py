@@ -2,10 +2,11 @@ from app import db, login
 from flask_login import UserMixin
 from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
+import os
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
-@login.user_loader
-def get_user(user_id):
-    return User.query.get(user_id)
 
 
 class User(db.Model, UserMixin):
@@ -32,11 +33,18 @@ class User(db.Model, UserMixin):
     def __str__(self):
         return self.username
 
+cloudinary.config(
+	cloud_name = os.environ.get('CLOUDINARYNAME'),
+	api_key = os.environ.get('CLOUDINARY_API_KEY'),
+	api_secret = os.environ.get('CLOUDINARY_API_SECRET'),
+)
+
 class Products(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     description = db.Column(db.Text, nullable=False)
     price = db.Column(db.Integer, nullable=False)
+    image_url = db.Column(db.String(100), default='https://via.placeholder.com/500')
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)

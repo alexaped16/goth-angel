@@ -1,7 +1,11 @@
 from ast import Pass
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
+from wtforms import StringField, PasswordField, SubmitField, FileField
 from wtforms.validators import DataRequired, Email, EqualTo
+
+class ProductForm(FlaskForm):
+    class ProductForm(FlaskForm):
+        image=FileField("Image")
 
 class SignUpForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
