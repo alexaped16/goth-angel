@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    <main>
+        <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-12">
+                    <h1 class="text-center display-1 text-light"><strong>Hello</strong>
+                    </h1>
+                </div>
+                <div class="container h-100">
+                    <div class="row h-100 justify-content-center align-items-center">
+                    <div class="col-12">
+                        <h1 class="text-center display-1 text-light"><strong>Welcome To Goth Angel</strong>
+                        </h1>
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    {% if current_user.is_authenticated %}
+
+    <h1>Welcome back {{ current_user.username }}!</h1>
+
+    {% else %}
+
+    <h1>Please create an account to buy something</h1>
+    <div class="col-12">
+        <h3 class="text-center display-8"> 
+            Need An Account?<a class="ml-2" href="{{ url_for('signup') }}"> <p>sign up here</p></a>
+        </h3>
+    </div>
+
+    {% endif %}
+
+
+    
+
+
+{% endblock content %}
