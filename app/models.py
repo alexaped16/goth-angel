@@ -1,3 +1,5 @@
+from email import message
+import email
 from app import db, login
 from flask_login import UserMixin
 from datetime import datetime
@@ -7,6 +9,9 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 
+@login.user_loader
+def get_user(user_id):
+    return User.query.get(user_id)
 
 
 class User(db.Model, UserMixin):
@@ -16,6 +21,7 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(256), nullable=False)
     date_created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     cart = db.relationship('Products', secondary='cart', backref='buyer', lazy=True)
+    
     
 
     def __init__(self, **kwargs):
@@ -67,6 +73,23 @@ class Cart(db.Model):
 
     def __repr__(self):
         return f"<Cart|id: {self.id}, Product id:{self.product_id}, User id:{self.user_id}>"
+
+class Contact(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(100), nullable=False)
+    subject = db.Column(db.String(100), nullable=False)
+    message = db.Column(db.Text, nullable=False)
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        db.session.add(self)
+        db.session.commit()
+
+    def __repr__(self): 
+        return f"<Contact|id: {self.id}, email: {self.email}"
+
+
     
 
 

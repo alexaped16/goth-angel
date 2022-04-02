@@ -7,13 +7,14 @@
 <meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Goth Angel | {{ title }}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='main.css')}}">
+<title>Goth Angel | </title>
 </head>
 <body>
 
     <header>
         <div class="row bg-dark">
+            <img src="{{url_for('static', filename='Seaser093600-R1-040-18A.jpg')}}" width="50" height="50" alt="">
             <h1 class="text-center text-white">Goth Angel</h1>
         </div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -22,12 +23,18 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse" id="navbar10">
+
+                          <img src="{{url_for('static', filename='IMG_71C7E6DB9E11-1.jpeg')}}" width="50" height="50" alt="">
+                    </div>
                     <ul class="navbar-nav nav-fill w-100">
                         <li class="nav-item">
                             <a class="nav-link font-weight-bold" href="{{ url_for('shop') }}">Shop</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link font-weight-bold" href="{{ url_for('index') }}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" href="{{ url_for('contact') }}">Contact</a>
                         </li>
                         {% if current_user.is_authenticated %}
                         <li class="nav-item">
@@ -61,6 +68,16 @@
     {% endblock content %}
 
     </div>
+
+    <div class="row bg-dark">
+        <div class="text-center text-white"><h1>Goth Angel</h1>
+            <div class="copyright"><p>Copyright &copy; <a href="#"></a> all rights reserved.</p><div>
+        </div>       
+    </div>
+
+
+
+
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>

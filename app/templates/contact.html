@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+      <div id=contact class="col align-self-start">
+        <form method="post">
+            <h1>{{ title }}</h1>
+            {{ form.csrf_token }}
+        
+            <div class="form-group">
+                <div class="form-label">
+                {{ form.name.label }}</div>
+                <div class="form-item">
+                {{ form.name(class='form-control', placeholder='Name') }}</div>
+                <div class="form-label">
+                {{ form.email.label }}</div>
+                <div class="form-item">
+                {{ form.email(class='form-control', placeholder='Email') }}</div>
+                <div class="form-label">
+                {{ form.subject.label }}</div>
+                <div class="form-item">
+                {{ form.subject(class='form-control', placeholder='Subject') }}</div>
+                <div class="form-label">
+                {{ form.message.label }}</div>
+                <div class="form-item">
+                {{ form.message(class='form-control', placeholder='Message') }}</div>
+        
+                {{ form.submit(class='btn btn-dark w-100') }}
+            </div>
+        </form>
+      </div>
+      <div class="col align-self-center">
+        
+      </div>
+      <div class="col align-self-end contact-photo">
+        <img src="{{url_for('static', filename='Seaser093600-R1-040-18A.jpg')}}" height=600px, width=400px alt="">
+      </div>
+    </div>
+  </div>
+
+  
+
+
+
+{% endblock content %}

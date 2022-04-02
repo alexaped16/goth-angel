@@ -26,13 +26,24 @@
 
     {% else %}
 
-    <h1>Please create an account to buy something</h1>
-    <div class="col-12">
-        <h3 class="text-center display-8"> 
-            Need An Account?<a class="ml-2" href="{{ url_for('signup') }}"> <p>sign up here</p></a>
-        </h3>
+    <div class="container-fluid" data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000">
+    <div class="row jumbotron">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+            <p class="lead">Everything on this site is handmade with love. Tracked shipping on all orders + next day shipping</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+            <a href="#"><button type="button" class="btn btn-outline-secondary
+            btn-lg">Shop</button></a>
+        </div>
     </div>
+    </div>
+    
 
+
+      
     {% endif %}
 
 
