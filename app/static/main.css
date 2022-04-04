@@ -1,12 +1,7 @@
 body {
-    color: #00264d; 
     text-align: center;
-    font-family: 'Manjari', sans-serif;
-  
   }
   
-
-
   .nav-item{
     font-family: 'Courier New', Courier, monospace
   }
@@ -15,46 +10,58 @@ body {
   {
     width: 100%;
     font-family: 'Courier New', Courier, monospace;
-    padding: 30px
+    padding-top: 50px
   
   }
 
+  .main{
+      padding: 100px
+  }
 
+  #response-time{
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 20px
+  }
 
+  #login{
+      padding-top: 100px
+  }
 
+  .login-form{
+      padding: 40px;
+  }
+
+  #contact{
+    padding-top: 90px;
+    margin-left: 100px
+}
+
+.contact-photo{
+    padding: 100px;
+}
 
 
   .form-group{
     font-family: 'Courier New', Courier, monospace;
-    padding: 10px;
+    padding-top: 10px;
     width: 300px;
   }
 
   .form-label{
-      padding: 5px
+      padding-top: 20px;
   }
 
   .form-item{
-      padding: 5px;
- 
+      padding: 1px;
   }
 
-  .form-button{
-      padding: 40px;
-      width: 200px;
 
+
+  #goth-angel{
+      padding: 15px
   }
 
-  #container{
-      align-items: center;
-  }
-  
 
-  
-  #noOfItems
-  {
-    margin-left: -20px
-  }
   
   .card
   {
@@ -81,20 +88,8 @@ body {
   
    
   
-  #logo
-  {
-    height:50px;
-  }
-  
-  
   footer {
-    left: 0;
-    bottom: 0;
-    text-align: center;
-    background-color: #f2f2f2;
-    font-family: 'Manjari', sans-serif;
-    margin-top: 40px;
-    color: #00264d
+    margin-top: 100px;
   }
 
 .copyright{

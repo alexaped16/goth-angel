@@ -3,11 +3,13 @@
 
 {% block content %}
 
-<div class="container-fluid">
+
+<div class="container w-100">
     <div class="row">
-      <div id=contact class="col align-self-start">
+      <div id=contact class="col-auto me-auto">
         <form method="post">
             <h1>{{ title }}</h1>
+            
             {{ form.csrf_token }}
         
             <div class="form-group">
@@ -27,15 +29,16 @@
                 {{ form.message.label }}</div>
                 <div class="form-item">
                 {{ form.message(class='form-control', placeholder='Message') }}</div>
-        
-                {{ form.submit(class='btn btn-dark w-100') }}
+                <div class="form-label">
+                {{ form.submit(class='btn btn-outline-dark w-100') }}</div>
             </div>
         </form>
+        <p id="response-time">Typical response time is 2-3 days!</p>
       </div>
       <div class="col align-self-center">
         
       </div>
-      <div class="col align-self-end contact-photo">
+      <div class="col-auto me-auto contact-photo">
         <img src="{{url_for('static', filename='Seaser093600-R1-040-18A.jpg')}}" height=600px, width=400px alt="">
       </div>
     </div>

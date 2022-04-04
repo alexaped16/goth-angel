@@ -1,6 +1,6 @@
 from email import message
 import email
-from app import db, login
+from app import login, db
 from flask_login import UserMixin
 from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -8,6 +8,7 @@ import os
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+
 
 @login.user_loader
 def get_user(user_id):

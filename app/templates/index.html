@@ -1,24 +1,12 @@
+
 {% extends 'base.html' %}
 
 {% block content %}
 
 
-    <main>
-        <div class="container h-100">
-            <div class="row h-100 justify-content-center align-items-center">
-                <div class="col-12">
-                    <h1 class="text-center display-1 text-light"><strong>Hello</strong>
-                    </h1>
-                </div>
-                <div class="container h-100">
-                    <div class="row h-100 justify-content-center align-items-center">
-                    <div class="col-12">
-                        <h1 class="text-center display-1 text-light"><strong>Welcome To Goth Angel</strong>
-                        </h1>
-                    </div>
-            </div>
-        </div>
-    </main>
+
+    
+      
 
     {% if current_user.is_authenticated %}
 
@@ -26,7 +14,7 @@
 
     {% else %}
 
-    <div class="container-fluid" data-aos="fade-up"
+    <div class="container-fluid main" data-aos="fade-up"
         data-aos-offset="200"
         data-aos-delay="50"
         data-aos-duration="1000">
@@ -35,15 +23,85 @@
             <p class="lead">Everything on this site is handmade with love. Tracked shipping on all orders + next day shipping</p>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
-            <a href="#"><button type="button" class="btn btn-outline-secondary
-            btn-lg">Shop</button></a>
+            <a href="#"><button type="button" class="btn btn-outline-dark
+            btn-lg">Shop Now</button></a>
         </div>
     </div>
     </div>
-    
 
+    <div class="container text-center my-3">
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="{{url_for('static', filename='IMG_99E67573723B-1.jpeg')}}" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="{{url_for('static', filename='IMG_5EBDC335CE43-1.jpeg')}}" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="{{url_for('static', filename='IMG_97D34BCBA0F2-1.jpeg')}}" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="{{url_for('static', filename='IMG_C94283424440-1.jpeg')}}" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="{{url_for('static', filename='IMG_71C7E6DB9E11-1.jpeg')}}" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="{{url_for('static', filename='IMG_E98502A7D2ED-1.jpeg')}}" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
 
-      
     {% endif %}
 
 
