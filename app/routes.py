@@ -10,11 +10,15 @@ def index():
     title = 'Home'
     return render_template('index.html',  title=title)
 
+@app.route('/about')
+def about():
+    title = 'About'
+    return render_template('about.html',  title=title)
+
 
 @app.route('/shop')
 def shop():
     title = 'Shop'
-    # products = products.query.all()
     return render_template('contact.html',  title=title)
 
 

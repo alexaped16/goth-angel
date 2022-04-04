@@ -55,14 +55,18 @@ body {
       padding: 1px;
   }
 
+  .about{
+    padding-top: 200px;
+    font-family: 'Courier New', Courier, monospace;
+
+  }
+
 
 
   #goth-angel{
       padding: 15px
   }
 
-
-  
   .card
   {
     width: 25rem; 
@@ -107,9 +111,14 @@ body {
     background-color:#282d32;
   }
 
+  .links{
+    padding-right: 100px;
+  }
+
   .footer-message{
     font-family: 'Courier New', Courier, monospace;
-    padding-left: 200px
+    padding-left: 0px;
+    padding-top: 50px
   }
   
 
@@ -131,20 +140,17 @@ body {
 
   }
   
-
- 
-  
   .footer-dark .copyright {
     text-align:center;
     padding-top:24px;
     opacity:0.3;
     font-size:13px;
-    margin-bottom:0;
+    margin-bottom:1;
   }
 
 .footer-image{
-    padding-top: 80px;
-    padding-left: 255px
+    padding-top: 100px;
+    padding-right: 50px
 }
 
 
