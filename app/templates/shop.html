@@ -2,33 +2,52 @@
 
 
 {% block content %}
-<div class="container h-100">
-    <div class="row h-100 justify-content-center align-items-center">
-        <div class="col-12">
-            <h1 class="text-center display-1 text-light"><strong>Shop</strong>
-            </h1>
-        </div>
 
-    {% for p in products %}
 
-    <div class="container">
-        <div class="row">
-          <div class="col-md">
-            <img src="{{url_for('static', filename='IMG_99E67573723B-1.jpeg')}}" class="d-block w-100" alt="...">
-          </div>
-          <div class="card">
-              <div class="card-body">
-                <h2 class="card-title">{{ p.name }}</h2>
-              </div>
-            <div>
-                <h3 >{{ p.description }}</h3>
-            </div>
-            <div>
-                <h3 >{{ p.price }}</h3>
-            </div>
-            <div class="btn btn-dark">Add to Cart</a>}}
-        </div>
-        {% endfor %}
+<div class="shop-container">
+    <h1 class="black-h1">I keep it simple.</h1>
+    <h3 class="black-h3">Pick your favorite beads for a custom piece.</h3>
+</div>
+
+
+
+  <div class="heroImage">
+    <h2 class="black-h2">Earrings</h2>
+    <p>Prices range from $10-$30 + shipping </p>
+    <div class="heroContents">
+        <img class="hero-image" src="/static/product-3.png" height="50%" width="50%">
+        <p>#pink & gold heart</p>
+        <img class="hero-image" src="/static/product-2.png" height="50%" width="50%">
+        <p>#simple pearl</p>
+        <img class="hero-image" src="/static/red-clay-earrings.png" height="50%" width="50%">
+        <p>#red glob</p>
+    </div>
+  </div>
+
+
+
+<div class="container">
+    <h2 class="black-h2">Available inventory can be purchased through instagram!</h2>
+    <a id="insta-shop-page" class="fab fa-instagram nav-link font-weight-bold" href="https://www.instagram.com/gothangel_jewelry/">gothangel_jewelry</a>
+</div>
+
+
+<div class="heroImage">
+  <h2 class="black-h2">Necklaces</h2>
+  <p>Prices range from $20-$30 + shipping </p>
+  <div class="heroContents">
+      <img class="hero-image" src="/static/butterfly-necklace.png" height="50%" width="50%">
+      <p>#baby butterfly</p>
+      <img class="hero-image" src="/static/heart-wings.png" height="50%" width="50%">
+      <p>#heart angel wings</p>
+      <img class="hero-image" src="/static/angel-necklace.png" height="50%" width="50%">
+      <p>#angel in distress</p>
+  </div>
+</div>
+
+
+
+
             
 
-{% endblock content %}  
+{% endblock content %}
