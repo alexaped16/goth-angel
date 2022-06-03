@@ -1,6 +1,5 @@
-from app import app, db
-from app.models import Cart, Contact, Products, User 
+from app import app, db 
 
 @app.shell_context_processor
 def make_context():
-    return {'db': db, 'User': User, 'Products': Products, 'Contact': Contact, 'Cart': Cart }
+    return {'db': db}
